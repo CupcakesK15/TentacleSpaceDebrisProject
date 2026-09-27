@@ -1,0 +1,26 @@
+# Build output (CMake + Ninja + Pico SDK)
+build/
+**/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.cmake
+!pico_sdk_import.cmake
+compile_commands.json
+
+# Compiled objects
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.uf2
+*.dis
+*.map
+
+# Editor / tooling
+.cache/
+
+# OS junk
+.DS_Store
+Thumbs.db
