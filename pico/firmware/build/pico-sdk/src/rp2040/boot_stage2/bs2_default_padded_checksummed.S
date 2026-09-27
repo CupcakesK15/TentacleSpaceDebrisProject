@@ -1,4 +1,4 @@
-// Padded and checksummed version of: C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

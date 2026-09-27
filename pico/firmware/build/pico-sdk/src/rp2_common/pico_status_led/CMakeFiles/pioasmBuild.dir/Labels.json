@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pioasmBuild"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pioasmBuild"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pioasmBuild.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pioasmBuild.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pioasmBuild-complete.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pioasmBuild-complete.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-build.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-build.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-configure.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-configure.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-download.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-download.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-install.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-install.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-mkdir.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-mkdir.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-patch.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-patch.rule"
 		},
 		{
-			"file" : "C:/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-update.rule"
+			"file" : "/mnt/c/Users/akusu/Desktop/College/Year 2 - 2627/Fall Sem - 26/3 - CS378/FRITentacleProject/pico/firmware/build/pico-sdk/src/rp2_common/pico_status_led/pioasm/src/pioasmBuild-stamp/pioasmBuild-update.rule"
 		}
 	],
 	"target" : 
