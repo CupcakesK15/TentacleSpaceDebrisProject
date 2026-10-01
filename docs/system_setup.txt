@@ -1,0 +1,82 @@
+For this project, you will need to set up according to OS:  
+
+
+RASPI5/DEBIAN-BASED LINUX DISTROS: 
+  1. Update package lists: Run 
+    sudo apt update
+
+  2. Install everything needed in one shot: This covers git, CMake, Ninja, the ARM cross-compiler, the C library for it, general build tools, and picotool (for flashing) — all from the standard repos, no separate downloads. Run
+    sudo apt install -y git cmake ninja-build gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential libusb-1.0-0-dev picotool
+
+  3. Clone the Pico SDK: Run
+    cd ~
+    git clone -b master https://github.com/raspberrypi/pico-sdk.git
+    cd pico-sdk
+    git submodule update --init
+
+  4. Set the Environment Variable: Run
+    echo 'export PICO_SDK_PATH="$HOME/pico-sdk"' >> ~/.bashrc
+    source ~/.bashrc
+
+  5. Verify it's All Working: Run
+    git --version
+    cmake --version
+    ninja --version
+    arm-none-eabi-gcc --version
+    echo $PICO_SDK_PATH
+  Each should print something real – $PICO_SDK_PATH should echo back /home/<username>/pico-sdk
+
+  6. Clone the project and build: Run
+    cd ~
+    git clone https://github.com/CupcakesK15/TentacleSpaceDebrisProject.git
+    cd TentacleSpaceDebrisProject/pico/firmware
+    mkdir build && cd build
+    cmake -G Ninja ..
+    ninja
+
+  7. Flash the Pico: Hold BOOTSEL on the Pico while plugging it inot the Pi 5's USB port, then run
+    picotool load tentacle_firmware.uf2 -f
+  
+  If 
+    sudo apt install picotool
+  says it can't find the package (dependent on version of OS) build from source instead with the following
+    cd ~
+    git clone https://github.com/raspberrypi/picotool.git
+    cd picotool
+    mkdir build && cd build
+    cmake -DPICO_SDK_PATH=$PICO_SDK_PATH ..
+    make -j$(nproc)
+    sudo make install
+
+
+
+
+
+WINDOWS: 
+  1. Install Git for Windows: Download from https://git-scm.com/download/win and run the installer with default options. This gives you git, a bash-like terminal, and Credential Manager for GitHub auth.
+
+  2. Install Python: Download from python.org/downloads — get the latest Windows installer. Important: check the box "Add python.exe to PATH" during install, or step 5 won't find it.
+
+  3. Install CMake: Download from cmake.org/download — get the Windows x64 Installer. During setup, choose "Add CMake to the system PATH for all users."
+
+  4. Install the ARM GNU Toolchain: Download from developer.arm.com/downloads/-/arm-gnu-toolchain-downloads — pick the Windows (mingw-w64-i686) hosted toolchain for AArch32 bare-metal target (arm-none-eabi). Run the installer and check "Add path to environment variable" if it's offered.
+
+  5. Install Ninja: Download ninja-win.zip from github.com/ninja-build/ninja/releases. Unzip it somewhere permanent (e.g. C:\ninja\) — it's just a single .exe, no installer. You'll need to add that folder to PATH manually (step 7).
+
+  6. Clone the Pico SDK: Open a terminal (Git Bash or PowerShell) and run the following: 
+    cd C:\
+    git clone -b master https://github.com/raspberrypi/pico-sdk.git
+    cd pico-sdk
+    git submodule update --init
+
+  7. Set up Environment Variables: Open Edit the system environment variables (search for it in the Start Menu) → Environment Variables. Under "User variables," add:
+    PICO_SDK_PATH → C:\pico-sdk
+  Then edit the Path variable and add an entry for wherever you put Ninja in step 5 (e.g. C:\ninja\) if it wasn't added automatically.
+
+  8. Verify everthing's on PATH: Open a fresh terminal (new window, so it picks up the changes) and run: 
+    git --version
+    python --version
+    cmake --version
+    ninja --version
+    arm-none-eabi-gcc --version
+  Each should print a version number. If any says "not recognized", that tool's PATH entry didn't take – recheck step 7 or that installer's PATH checkbox.
