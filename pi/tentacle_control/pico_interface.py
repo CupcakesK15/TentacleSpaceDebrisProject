@@ -1,6 +1,10 @@
 import serial
 from .enums import TentacleFlag, TentacleError
 
+import utils.mock_data as mock
+
+USE_MOCK = True 
+
 
 class PicoInterface:
     def __init__(self, port):
@@ -60,21 +64,31 @@ class PicoInterface:
         return None, line
 
     def curl(self, speed):
+        if USE_MOCK: 
+            return mock.fake_curl(speed)
         self.send_command(f"CURL {speed}")
         return self.read_response()
 
     def retract(self, speed):
+        if USE_MOCK: 
+            return mock.fake_retract()
         self.send_command(f"RETRACT {speed}")
         return self.read_response()
 
     def set_baseline(self):
+        if USE_MOCK: 
+            return mock.fake_set_baseline()
         self.send_command("SET_BASELINE")
         return self.read_response()
 
     def request_state(self):
+        if USE_MOCK: 
+            return mock.fake_state()
         self.send_command("REQUEST_STATE")
         return self.read_response()
 
     def heartbeat(self):
+        if USE_MOCK: 
+            return mock.fake_heartbeat()
         self.send_command("HEARTBEAT")
         return self.read_response()

@@ -1,0 +1,13 @@
+#will finish later and will include into places later
+
+serial_port: "/dev/ttyACM0"
+baud_rate: 115200
+
+tentacle: 
+  id: 0
+  sensor_count: 3
+  imu_addresses: [0x68, 0x69, 0x68]
+
+control: 
+  curl_gain: 200.0
+  speed_limit: 300
