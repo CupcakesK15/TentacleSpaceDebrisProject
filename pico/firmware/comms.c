@@ -46,7 +46,7 @@ void comms_send_state(float curvature, float tension, const char *flag) {
   printf("STATE %.3f %.3f %s\n", curvature, tension, flag);
 }
 
-void parse_command(const char *cmd, Motor *motorA, Motor *motorB,
+void parse_command(const char *cmd, Motor *motors, int motor_count,
                    Sensor *sensors, int sensor_count) {
   if (strcmp(cmd, "STATE") == 0) {
     float curvature = fuse_curvature(sensors, sensor_count);
@@ -55,12 +55,13 @@ void parse_command(const char *cmd, Motor *motorA, Motor *motorB,
   }
   else if (strncmp(cmd, "CURL", 5) == 0) {
     float target = atof(cmd + 5);
-    curl_to_target(motorA, motorB, sensors, sensor_count, target);
+    curl_to_target(motors, motor_count, sensors, sensor_count, target);
     comms_send_ack("CURL_DONE");
   }
   else if (strcmp(cmd, "STOP") == 0) {
-    motor_stop(motorA);
-    motor_stop(motorB);
+    for (int i = 0; i < motor_count; i++) {
+      motor_stop(&motors[i]);
+    }
     comms_send_ack("STOP");
   }
   else {
