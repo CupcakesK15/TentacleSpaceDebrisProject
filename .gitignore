@@ -24,3 +24,8 @@ compile_commands.json
 # OS junk
 .DS_Store
 Thumbs.db
+
+venv/
+__pycache__/
+*.pyc
+pico/firmware/build/
