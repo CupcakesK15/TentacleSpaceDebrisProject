@@ -24,3 +24,12 @@ compile_commands.json
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Firmware build output
+pico/firmware/build/

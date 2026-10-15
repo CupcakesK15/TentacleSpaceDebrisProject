@@ -11,3 +11,9 @@ class TentacleFlag(Enum):
     OK = 0
     WARN = 1
     ERR = 2
+
+class TentacleStatus(Enum):
+    IDLE = 0
+    MOVING = 1
+    DONE = 2
+    TIMEOUT = 3

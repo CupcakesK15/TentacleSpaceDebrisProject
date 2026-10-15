@@ -2,8 +2,10 @@
 #define IMU_H
 
 #include <stdint.h>
+#include "hardware/i2c.h"
 
 typedef struct {
+  i2c_inst_t *i2c;
   uint8_t i2c_addr;
   //raw MPU6050 readings stored in these
   float ax, ay, az;

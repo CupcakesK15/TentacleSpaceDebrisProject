@@ -2,12 +2,13 @@
 #include "motor_control.h"
 #include "pico/stdlib.h"
 #include "sensor_read.h"
+#include "tentacle_control.h"
 
 // ALL VALUES IN THESE INITIALIZATIONS ARE PLACEHOLDERS
 
-IMU imu1 = {.i2c_addr = 0x68};
-IMU imu2 = {.i2c_addr = 0x69};
-IMU imu3 = {.i2c_addr = 0x68}; // if on a second I2C bus or a mux
+IMU imu1 = {.i2c = i2c0, .i2c_addr = 0x68};
+IMU imu2 = {.i2c = i2c0, .i2c_addr = 0x69};
+IMU imu3 = {.i2c = i2c1, .i2c_addr = 0x68}; // if on a second I2C bus or a mux
 
 Sensor sensors[] = {
   {SENSOR_IMU, &imu1}, 
@@ -43,5 +44,7 @@ int main() {
     if (len > 0) {
       parse_command(buffer, motors, motor_count, sensors, sensor_count);
     }
+
+    tc_update(motors, motor_count, sensors, sensor_count);
   }
 }

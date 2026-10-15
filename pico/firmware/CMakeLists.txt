@@ -13,14 +13,18 @@ add_executable(tentacle_firmware
     comms.c
     motor_control.c
     sensor_read.c
+    sensor_fusion.c
     imu.c
+    tentacle_control.c
 )
 
 target_link_libraries(tentacle_firmware
     pico_stdlib
-    hardware_uart
     hardware_pwm
     hardware_i2c
 )
 
+# printf/getchar go over the USB cable (shows up as /dev/ttyACM* on the Pi)
+pico_enable_stdio_usb(tentacle_firmware 1)
+pico_enable_stdio_uart(tentacle_firmware 0)
 pico_add_extra_outputs(tentacle_firmware)
